@@ -22,6 +22,15 @@ public class DigitSum {
      */
     public static int digitSum(int n) {
         // TODO: complete
-        return 0;
+        int absolute = Math.abs(n);
+        StringBuilder sb = new StringBuilder(String.valueOf(absolute));
+        int sum = 0;
+        while (sb.length() > 0){
+            char int_as_str = sb.charAt(0);
+            int single = Character.getNumericValue(int_as_str);
+            sum += single;
+            sb.deleteCharAt(0);
+        }
+        return sum;
     }
 }
