@@ -110,7 +110,7 @@ public class NumberTriangle {
     //       Hint: String#charAt(int) and String#length() are all you need for the
     //       iterative version; a recursive version can use String#substring(1).
     NumberTriangle curr = this;
-    for(int i = 0; i <= path.length(); i++) {
+    for(int i = 0; i < path.length(); i++) {
       if (path.charAt(i) == 'l') {
         curr = curr.left;
       } else {
@@ -196,7 +196,7 @@ public class NumberTriangle {
       //       right child of one node is the left child of the next node over.
       String[] num = line.trim().split("\\s+");
       NumberTriangle[] curr_row = new NumberTriangle[num.length];
-      for (int i = 0; i<= num.length; i++) {
+      for (int i = 0; i < num.length; i++) {
         int curr_int = Integer.parseInt(num[i]);
         NumberTriangle curr_tri = new NumberTriangle(curr_int);
         curr_row[i] = curr_tri;
