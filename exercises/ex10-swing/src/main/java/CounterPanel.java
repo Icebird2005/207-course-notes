@@ -32,6 +32,10 @@ public class CounterPanel extends JPanel {
     //       button.addActionListener(...)). When the button is clicked, its
     //       actionPerformed should increment `count` and then call
     //       label.setText("Count: " + count) so the label shows the new total.
+    button.addActionListener(e -> {
+      count++;
+        label.setText("Count: " + count);
+    });
   }
 
   /**
